@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Target, Heart, Users, Zap, Shield, Lightbulb, Handshake } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ianPortrait from '@/assets/ian-portrait.png';
 
 const About = () => {
   const timeline = [
@@ -86,10 +87,13 @@ const About = () => {
               </Link>
             </div>
             <div className="flex justify-center">
-              <div className="w-80 h-80 bg-gradient-to-br from-emerald/20 to-gold/20 rounded-full flex items-center justify-center border border-emerald/30">
-                <div className="w-72 h-72 bg-gray-300 rounded-full flex items-center justify-center text-gray-600">
-                  Professional Photo
-                </div>
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-emerald via-gold to-emerald rounded-full opacity-75 blur-lg animate-glow"></div>
+                <img
+                  src={ianPortrait}
+                  alt="Ian Macharia - Professional Portrait"
+                  className="relative w-80 h-80 object-cover rounded-full border-4 border-white/20 shadow-2xl"
+                />
               </div>
             </div>
           </div>
